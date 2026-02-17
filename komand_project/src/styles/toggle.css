@@ -1,0 +1,19 @@
+.toggle {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  background: #ff7f50;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: 0.3s;
+}
+
+.toggle:hover {
+  background: #ff5722;
+  transform: translateY(-3px);
+}
