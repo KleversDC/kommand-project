@@ -1,16 +1,17 @@
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 25px 40px;
   background: #ffffff;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
   border-radius: 0 0 20px 20px;
-  position: fixed; /* фіксована шапка */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
+  transition: background 0.3s, box-shadow 0.3s;
 }
 
 .app.dark .header {
@@ -42,4 +43,40 @@
   font-size: 24px;
   font-weight: 600;
   color: inherit;
+}
+
+/* Контейнер для кнопок */
+.header-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* Стильні кнопки */
+.header-btn {
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #ff7f50, #ffb347);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+}
+
+.header-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  background: linear-gradient(135deg, #ff6a30, #ffa637);
+}
+
+/* Темна тема кнопок */
+.app.dark .header-btn {
+  background: linear-gradient(135deg, #444, #666);
+  color: #f0f0f0;
+}
+
+.app.dark .header-btn:hover {
+  background: linear-gradient(135deg, #555, #888);
 }
